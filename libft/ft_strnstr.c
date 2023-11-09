@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:39:08 by averin            #+#    #+#             */
-/*   Updated: 2023/08/10 20:48:38 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:52:55 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 	size_t	little_len;
 
-	if (big == NULL || little == NULL)
-		return (NULL);
 	i = 0;
 	little_len = ft_strlen(little);
 	if (little_len == 0)

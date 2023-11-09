@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:21:09 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 13:49:18 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:53:00 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ static void	*memcpy(void *dest, const void *src, size_t n)
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (dest == NULL || src == NULL)
-		return (NULL);
 	if (dest > src)
 		reverse_memcpy(dest, src, n);
 	else

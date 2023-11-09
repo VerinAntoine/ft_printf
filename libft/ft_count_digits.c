@@ -6,17 +6,46 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 16:20:49 by averin            #+#    #+#             */
-/*   Updated: 2023/08/13 16:36:40 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/09 16:20:06 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		ft_count_unsigned_digits_base(unsigned long n, int base)
+{
+	int digits;
+
+	digits = 0;
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n /= base;
+		digits++;
+	}
+	return (digits);
+}
+
+int		ft_count_unsigned_digits(unsigned long n)
+{
+	return (ft_count_unsigned_digits_base(n, 10));
+}
 
 int		ft_count_digits_base(long n, int base)
 {
 	int digits;
 
 	digits = 0;
+	if (n == 0)
+		return (1);
+	if (n == INT_MIN)
+		return (11);
+	if (n < 0)
+	{
+		n = -n;
+		digits++;
+	}
 	while (n > 0)
 	{
 		n /= base;

@@ -1,6 +1,8 @@
 {
 	"files.associations": {
-		"ft.h": "c",
+		"unistd.h": "c",
+		"features.h": "c",
+		"limits.h": "c",
 		"libft.h": "c"
 	}
 }

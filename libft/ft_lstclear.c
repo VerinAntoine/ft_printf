@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:36:57 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 21:59:02 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:53:04 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*crt;
 	t_list	*next;
 
-	if (!lst || !del)
-		return ;
 	crt = *lst;
 	while (crt)
 	{

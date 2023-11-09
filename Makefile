@@ -3,16 +3,16 @@ CC		= cc
 CCLFAGS	= -Wall -Wextra -Werror -g3
 LIBS	= libft/libft.a
 INCLDS	= libft
-SRCS	= ft_printf.c print_char.c print_str.c print_hexa.c
+SRCS	= ft_printf.c print_char.c print_str.c print_hexa.c print_int.c print_base.c print_unsigned_int.c
 OBJS	= ${SRCS:.c=.o}
 
-${NAME}: ${OBJS} libft
+${NAME}: ${OBJS} libft.a
 	cp libft/libft.a ./${NAME}
 	ar rcs ${NAME} ${OBJS}
 
 all: ${NAME}
 
-libft: libft/Makefile
+libft.a: libft/Makefile
 	make -C libft
 
 %.o: %.c

@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 08:42:27 by averin            #+#    #+#             */
-/*   Updated: 2023/08/07 08:56:08 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:52:57 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t			src_len;
 	unsigned int	i;
 
-	if (dst == NULL || src == NULL)
-		return (0);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dst_len >= size)

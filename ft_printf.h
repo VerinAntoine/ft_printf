@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 10:26:02 by averin            #+#    #+#             */
-/*   Updated: 2023/11/06 11:53:01 by averin           ###   ########.fr       */
+/*   Created: 2023/08/12 16:45:35 by averin            #+#    #+#             */
+/*   Updated: 2023/11/09 13:38:58 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_H
+# define FT_H
+# include "libft.h"
+# include <stdarg.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*p;
-	size_t			i;
+int	ft_printf(const char *s, ...);
+int	print_char(char c);
+int	print_str(char *s);
+int print_base(unsigned long i, char *base);
+int	print_ptr_hexa(unsigned long n);
+int	print_int(int i);
+int	print_unsigned_int(unsigned int i);
 
-	p = (unsigned char *) s;
-	i = -1;
-	if (s == NULL)
-		return (NULL);
-	while (++i < n)
-	{
-		if (*p == (unsigned char) c)
-			return ((char *) p);
-		p++;
-	}
-	return (NULL);
-}
+#endif

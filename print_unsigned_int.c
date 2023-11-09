@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   print_unsigned_int.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 16:45:35 by averin            #+#    #+#             */
-/*   Updated: 2023/08/12 18:20:12 by averin           ###   ########.fr       */
+/*   Created: 2023/11/09 13:24:47 by averin            #+#    #+#             */
+/*   Updated: 2023/11/09 13:44:19 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
-# include "libft.h"
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *s, ...);
-
-#endif
+int	print_unsigned_int(unsigned int i)
+{
+	ft_putnbr_unsigned_fd(i, 1);
+	return (ft_count_unsigned_digits(i));
+}

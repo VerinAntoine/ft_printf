@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 09:55:16 by averin            #+#    #+#             */
-/*   Updated: 2023/11/09 16:36:14 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/09 16:36:24 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
-# define LONG_MAX 9223372036854775807L
-# define LONG_MIN -9223372036854775808L
 # include <stdlib.h>
 # include <unistd.h>
 

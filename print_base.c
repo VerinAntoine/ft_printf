@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   print_base.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 10:26:02 by averin            #+#    #+#             */
-/*   Updated: 2023/11/06 11:53:01 by averin           ###   ########.fr       */
+/*   Created: 2023/11/09 13:29:01 by averin            #+#    #+#             */
+/*   Updated: 2023/11/09 16:04:06 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int print_base(unsigned int i, char *base)
 {
-	unsigned char	*p;
-	size_t			i;
-
-	p = (unsigned char *) s;
-	i = -1;
-	if (s == NULL)
-		return (NULL);
-	while (++i < n)
-	{
-		if (*p == (unsigned char) c)
-			return ((char *) p);
-		p++;
-	}
-	return (NULL);
+	ft_putnbr_unsigned_base_fd(i, base, 1);
+	return (ft_count_unsigned_digits_base(i, ft_strlen(base)));
 }

@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 22:58:20 by averin            #+#    #+#             */
-/*   Updated: 2023/08/07 09:04:38 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:53:05 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	ft_atoi(const char *nptr)
 	int	r;
 	int	sign;
 
-	if (nptr == NULL)
-		return (0);
 	r = 0;
 	sign = 1;
 	while (ft_isspace(*nptr))

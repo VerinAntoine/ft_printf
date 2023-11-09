@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 17:15:34 by averin            #+#    #+#             */
-/*   Updated: 2023/08/05 17:50:41 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 12:05:49 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (s == NULL)
-		return (NULL);
+	char	ch;
+
+	ch = c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == ch)
 			return ((char *) s);
 		s++;
 	}
-	if (c == '\0')
+	if (ch == '\0')
 		return ((char *) s);
 	return (NULL);
 }

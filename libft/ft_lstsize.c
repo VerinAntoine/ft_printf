@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:28:14 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 21:58:46 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:53:01 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
-	if (!lst)
-		return (0);
 	size = 0;
 	while (lst)
 	{

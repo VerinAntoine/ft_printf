@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 21:31:14 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 21:58:53 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:53:04 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!lst || !new)
-		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;

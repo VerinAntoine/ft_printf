@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:09:01 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 13:48:38 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:52:58 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strdup(const char *s)
 {
 	char	*r;
 
-	if (s == NULL)
-		return (NULL);
 	r = (char *) malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!r)
 		return (NULL);

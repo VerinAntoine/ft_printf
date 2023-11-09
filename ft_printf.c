@@ -6,15 +6,11 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 16:42:57 by averin            #+#    #+#             */
-/*   Updated: 2023/08/13 16:39:11 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/09 16:19:05 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
-
-int	print_char(char c);
-int	print_str(char *s);
-int	print_hexa(long n);
+#include "ft_printf.h"
 
 int	dispatch(const char type, va_list ap)
 {
@@ -23,7 +19,17 @@ int	dispatch(const char type, va_list ap)
 	if (type == 's')
 		return (print_str(va_arg(ap, char *)));
 	if (type == 'p')
-		return (print_hexa(va_arg(ap, long)));
+		return (print_ptr_hexa(va_arg(ap, unsigned long)));
+	if (type == 'd' || type == 'i')
+		return (print_int(va_arg(ap, int)));
+	if (type == 'u')
+		return (print_unsigned_int(va_arg(ap, unsigned int)));
+	if (type == 'x')
+		return (print_base(va_arg(ap, int), "0123456789abcdef"));
+	if (type == 'X')
+		return (print_base(va_arg(ap, int), "0123456789ABCDEF"));
+	if (type == '%')
+		return (print_char('%'));
 	return (1);
 }
 

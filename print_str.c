@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:08:44 by averin            #+#    #+#             */
-/*   Updated: 2023/08/12 20:09:10 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/09 14:31:43 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 int	print_str(char *s)
 {
+	if (s == NULL)
+	{
+		ft_putstr_fd("(null)", 1);
+		return (6);
+	}
 	ft_putstr_fd(s, 1);
 	return (ft_strlen(s));
 }

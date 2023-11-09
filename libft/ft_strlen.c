@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 20:59:35 by averin            #+#    #+#             */
-/*   Updated: 2023/08/05 17:13:45 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:52:56 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	int	i;
 
-	if (s == NULL)
-		return (0);
 	i = 0;
 	while (s[i])
 		i++;

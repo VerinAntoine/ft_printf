@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 10:26:02 by averin            #+#    #+#             */
-/*   Updated: 2023/11/06 11:53:01 by averin           ###   ########.fr       */
+/*   Created: 2023/11/09 13:02:45 by averin            #+#    #+#             */
+/*   Updated: 2023/11/09 16:26:25 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
+#include <stdio.h>
+#include <limits.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main()
 {
-	unsigned char	*p;
-	size_t			i;
-
-	p = (unsigned char *) s;
-	i = -1;
-	if (s == NULL)
-		return (NULL);
-	while (++i < n)
-	{
-		if (*p == (unsigned char) c)
-			return ((char *) p);
-		p++;
-	}
-	return (NULL);
+	char *s = 0;
+	int a = printf(" %p %p \n", LONG_MIN, LONG_MAX);
+	int b = ft_printf(" %p %p \n", LONG_MIN, LONG_MAX);
+	printf("result: %d vs %d\n", a, b);
 }
