@@ -6,15 +6,15 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 16:20:49 by averin            #+#    #+#             */
-/*   Updated: 2023/11/09 16:20:06 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/10 13:20:19 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_unsigned_digits_base(unsigned long n, int base)
+int	ft_count_unsigned_digits_base(unsigned long n, int base)
 {
-	int digits;
+	int	digits;
 
 	digits = 0;
 	if (n == 0)
@@ -27,14 +27,14 @@ int		ft_count_unsigned_digits_base(unsigned long n, int base)
 	return (digits);
 }
 
-int		ft_count_unsigned_digits(unsigned long n)
+int	ft_count_unsigned_digits(unsigned long n)
 {
 	return (ft_count_unsigned_digits_base(n, 10));
 }
 
-int		ft_count_digits_base(long n, int base)
+int	ft_count_digits_base(long n, int base)
 {
-	int digits;
+	int	digits;
 
 	digits = 0;
 	if (n == 0)
@@ -54,7 +54,7 @@ int		ft_count_digits_base(long n, int base)
 	return (digits);
 }
 
-int		ft_count_digits(long n)
+int	ft_count_digits(long n)
 {
 	return (ft_count_digits_base(n, 10));
 }

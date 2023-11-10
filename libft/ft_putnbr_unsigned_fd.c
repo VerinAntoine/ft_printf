@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 20:14:27 by averin            #+#    #+#             */
-/*   Updated: 2023/11/09 16:48:55 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/10 13:20:46 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	recu_unsigned(unsigned long n, char *base, unsigned int base_len, int fd)
 	if (n >= base_len)
 		digits = recu_unsigned(n / base_len, base, base_len, fd) + 1;
 	ft_putchar_fd(base[n % base_len], fd);
-	return digits;
+	return (digits);
 }
 
 int	ft_putnbr_unsigned_base_fd(unsigned long n, char *base, int fd)
@@ -28,7 +28,7 @@ int	ft_putnbr_unsigned_base_fd(unsigned long n, char *base, int fd)
 	int	base_len;
 
 	base_len = ft_strlen(base);
-	return recu_unsigned(n, base, base_len, fd);
+	return (recu_unsigned(n, base, base_len, fd));
 }
 
 void	ft_putnbr_unsigned_fd(unsigned long n, int fd)
