@@ -6,13 +6,13 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:19:26 by averin            #+#    #+#             */
-/*   Updated: 2023/11/10 13:25:21 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/16 09:58:53 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "libft.h"
+# include "libft/libft.h"
 # include <stdarg.h>
 
 int	ft_printf(const char *s, ...);

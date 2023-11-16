@@ -18,6 +18,15 @@ libft.a: libft/Makefile
 %.o: %.c
 	${CC} ${CCLFAGS} -c $< -o $@ -I ${INCLDS}
 
+relib:
+	make re -C libft
+
+cleanlib:
+	make clean -C libft
+
+fcleanlib:
+	make fclean -C libft
+
 clean:
 	rm -f ${OBJS}
 

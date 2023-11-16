@@ -6,11 +6,11 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:07:39 by averin            #+#    #+#             */
-/*   Updated: 2023/08/12 20:08:13 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/16 09:58:34 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	print_char(char c)
 {
